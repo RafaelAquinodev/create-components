@@ -1,11 +1,24 @@
-import { Button } from "@/components/button";
+import { InputField, InputIcon, InputRoot } from "@/components/input";
+import { Mail, User } from "lucide-react";
 
 export default function Home() {
   return (
-    <main>
-      <div>Hello world!</div>
+    <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
+      <div className="space-y-3">
+        <InputRoot>
+          <InputIcon>
+            <User />
+          </InputIcon>
+          <InputField type="text" placeholder="Nome completo" />
+        </InputRoot>
 
-      <Button teste="teste" />
+        <InputRoot>
+          <InputIcon>
+            <Mail />
+          </InputIcon>
+          <InputField type="text" placeholder="E-mail" />
+        </InputRoot>
+      </div>
     </main>
   );
 }
